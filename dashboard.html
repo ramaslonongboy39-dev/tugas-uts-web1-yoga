@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | BookHaven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-inner">
+
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">B</span>
+            BookHaven
+        </a>
+
+        <nav class="nav-links">
+            <a href="dashboard.html" class="active">Beranda</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="checkout.html">Pemesanan</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn btn-outline" id="logoutBtn">
+                Keluar
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">Your Favorite Bookstore</p>
+
+            <h1 id="greeting">
+                Selamat Datang di BookHaven!
+            </h1>
+
+            <p id="userRole" class="user-role"></p>
+
+            <p>
+                Temukan buku terbaik untuk memperluas wawasan,
+                mengembangkan diri, dan mendapatkan inspirasi baru.
+            </p>
+
+            <div class="form-actions">
+                <a href="stok.html" class="btn btn-gold">
+                    Jelajahi Buku →
+                </a>
+
+                <a href="tracking.html" class="btn btn-outline"
+                   style="background:transparent;color:white;border-color:#7186a5">
+                    Lacak Pesanan
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="img/kepemimpinan.jpg"
+                 alt="Buku Kepemimpinan">
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Explore Categories</p>
+                <h2>Kategori Pilihan</h2>
+                <p>Temukan buku sesuai minat dan kebutuhanmu.</p>
+            </div>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="stok.html" class="category-card">
+                <div class="category-icon">📚</div>
+                <h3>Manajemen</h3>
+                <p>Bisnis dan kepemimpinan</p>
+            </a>
+
+            <a href="stok.html" class="category-card">
+                <div class="category-icon">📊</div>
+                <h3>Keuangan</h3>
+                <p>Keuangan dan akuntansi</p>
+            </a>
+
+            <a href="stok.html" class="category-card">
+                <div class="category-icon">🔬</div>
+                <h3>Sains</h3>
+                <p>Ilmu pengetahuan</p>
+            </a>
+
+            <a href="stok.html" class="category-card">
+                <div class="category-icon">🎓</div>
+                <h3>Pendidikan</h3>
+                <p>Belajar dan pengembangan</p>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="promo">
+
+        <div>
+            <p class="eyebrow">BookHaven Collection</p>
+
+            <h2>Mulai Perjalanan Membacamu</h2>
+
+            <p>
+                Buku yang tepat dapat membuka wawasan baru.
+            </p>
+        </div>
+
+        <a href="stok.html" class="btn btn-primary">
+            Lihat Katalog →
+        </a>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="eyebrow">Our Collection</p>
+                <h2>Buku Pilihan</h2>
+                <p>Beberapa buku yang tersedia di BookHaven.</p>
+            </div>
+
+            <a href="stok.html" class="btn btn-outline">
+                Lihat Semua
+            </a>
+
+        </div>
+
+        <div id="featuredBooks" class="book-grid"></div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+            <a href="dashboard.html" class="brand"
+               style="color:white">
+                <span class="brand-icon">B</span>
+                BookHaven
+            </a>
+
+            <p style="margin-top:10px">
+                Your trusted online bookstore.
+            </p>
+        </div>
+
+        <div>
+            <p>© 2026 BookHaven Bookstore</p>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

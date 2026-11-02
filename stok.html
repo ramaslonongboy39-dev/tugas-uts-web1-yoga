@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku | BookHaven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-inner">
+
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">B</span>
+            BookHaven
+        </a>
+
+        <nav class="nav-links">
+            <a href="dashboard.html">Beranda</a>
+            <a href="stok.html" class="active">Katalog Buku</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="checkout.html">Pemesanan</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn btn-outline" id="logoutBtn">
+                Keluar
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="page-heading">
+        <p class="eyebrow">Book Collection</p>
+        <h1>Katalog Buku</h1>
+        <p>Jelajahi koleksi buku yang tersedia di BookHaven.</p>
+    </section>
+
+    <section class="panel">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Find Your Book</p>
+                <h2>Cari Buku</h2>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <span>⌕</span>
+
+            <input type="text"
+                   id="searchBook"
+                   placeholder="Cari berdasarkan nama atau kategori buku...">
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Available Books</p>
+                <h2>Koleksi Kami</h2>
+                <p id="bookCount">Buku yang tersedia.</p>
+            </div>
+        </div>
+
+        <div id="bookList" class="book-grid"></div>
+
+    </section>
+
+    <section class="panel">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Administrator</p>
+                <h2>Data Stok Buku</h2>
+                <p>Kelola data buku yang tersedia.</p>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button class="btn btn-primary" id="showBookForm">
+                + Tambah Buku
+            </button>
+        </div>
+
+        <div id="bookFormPanel" class="hidden"
+             style="margin-top:25px">
+
+            <form id="bookForm" class="form-grid">
+
+                <div class="form-group">
+                    <label for="bookCode">Kode Buku</label>
+                    <input type="text" id="bookCode"
+                           placeholder="Contoh: BK006" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookName">Nama Buku</label>
+                    <input type="text" id="bookName"
+                           placeholder="Nama buku" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookCategory">Kategori</label>
+                    <input type="text" id="bookCategory"
+                           placeholder="Kategori buku" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookPrice">Harga</label>
+                    <input type="number" id="bookPrice"
+                           min="1" placeholder="Harga buku" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookStock">Stok</label>
+                    <input type="number" id="bookStock"
+                           min="0" placeholder="Jumlah stok" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookImage">Nama File Gambar</label>
+                    <input type="text" id="bookImage"
+                           placeholder="img/nama_buku.jpg" required>
+                </div>
+
+                <div class="form-actions form-span">
+                    <button type="submit" class="btn btn-primary">
+                        Simpan Buku
+                    </button>
+
+                    <button type="button"
+                            class="btn btn-outline"
+                            id="cancelBookForm">
+                        Batal
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Kode</th>
+                        <th>Nama Buku</th>
+                        <th>Kategori</th>
+                        <th>Harga</th>
+                        <th>Stok</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="stockTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <a href="dashboard.html" class="brand"
+               style="color:white">
+                <span class="brand-icon">B</span>
+                BookHaven
+            </a>
+            <p style="margin-top:10px">
+                Your trusted online bookstore.
+            </p>
+        </div>
+        <div>
+            <p>© 2026 BookHaven Bookstore</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

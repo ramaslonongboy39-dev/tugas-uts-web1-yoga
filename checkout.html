@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | BookHaven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-inner">
+
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">B</span>
+            BookHaven
+        </a>
+
+        <nav class="nav-links">
+            <a href="dashboard.html">Beranda</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="checkout.html" class="active">Pemesanan</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn btn-outline" id="logoutBtn">
+                Keluar
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="page-heading">
+        <p class="eyebrow">Order & Payment</p>
+        <h1>Checkout</h1>
+        <p>Lengkapi data untuk melakukan pemesanan buku.</p>
+    </section>
+
+    <section class="panel">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Customer Information</p>
+                <h2>Data Pemesan</h2>
+            </div>
+        </div>
+
+        <form id="checkoutForm" class="form-grid">
+
+            <div class="form-group">
+                <label for="customerName">Nama Lengkap</label>
+                <input type="text" id="customerName"
+                       placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customerEmail">Email</label>
+                <input type="email" id="customerEmail"
+                       placeholder="Masukkan email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customerPhone">Nomor Telepon</label>
+                <input type="tel" id="customerPhone"
+                       placeholder="08xxxxxxxxxx" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customerAddress">Alamat Pengiriman</label>
+                <textarea id="customerAddress"
+                          rows="3"
+                          placeholder="Masukkan alamat lengkap"
+                          required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="checkoutBook">Pilih Buku</label>
+                <select id="checkoutBook" required>
+                    <option value="">Pilih buku</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="checkoutQty">Jumlah</label>
+                <input type="number" id="checkoutQty"
+                       min="1" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentMethod">Metode Pembayaran</label>
+                <select id="paymentMethod" required>
+                    <option value="">Pilih metode pembayaran</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="E-Wallet">E-Wallet</option>
+                    <option value="COD">Cash on Delivery (COD)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="shippingMethod">Pengiriman</label>
+                <select id="shippingMethod" required>
+                    <option value="Reguler">Reguler - Rp15.000</option>
+                    <option value="Express">Express - Rp25.000</option>
+                </select>
+            </div>
+
+            <div class="form-group form-span">
+                <label>Total Pembayaran</label>
+                <h2 id="checkoutTotal">Rp0</h2>
+            </div>
+
+            <div class="form-actions form-span">
+                <button type="submit" class="btn btn-primary">
+                    Buat Pesanan →
+                </button>
+
+                <a href="stok.html" class="btn btn-outline">
+                    Kembali ke Katalog
+                </a>
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="panel">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Order History</p>
+                <h2>Riwayat Pemesanan</h2>
+            </div>
+        </div>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Nomor DO</th>
+                        <th>Nama Pemesan</th>
+                        <th>Buku</th>
+                        <th>Jumlah</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="orderTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <a href="dashboard.html" class="brand"
+               style="color:white">
+                <span class="brand-icon">B</span>
+                BookHaven
+            </a>
+            <p style="margin-top:10px">
+                Your trusted online bookstore.
+            </p>
+        </div>
+        <div>
+            <p>© 2026 BookHaven Bookstore</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

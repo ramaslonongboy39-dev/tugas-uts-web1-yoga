@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking | BookHaven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-inner">
+
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">B</span>
+            BookHaven
+        </a>
+
+        <nav class="nav-links">
+            <a href="dashboard.html">Beranda</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="tracking.html" class="active">Tracking</a>
+            <a href="checkout.html">Pemesanan</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn btn-outline" id="logoutBtn">
+                Keluar
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="page-heading">
+        <p class="eyebrow">Delivery Information</p>
+        <h1>Tracking Pengiriman</h1>
+        <p>Pantau perjalanan pesanan buku kamu.</p>
+    </section>
+
+    <section class="hero" style="min-height:260px">
+
+        <div class="hero-content">
+            <p class="eyebrow">Track Your Order</p>
+
+            <h1 style="font-size:35px">
+                Pesananmu,<br>Dalam Pantauan.
+            </h1>
+
+            <p>
+                Masukkan nomor Delivery Order atau NIM
+                untuk melihat informasi pengiriman.
+            </p>
+        </div>
+
+        <div class="hero-image">
+            <img src="img/pengantar_komunikasi.jpg"
+                 alt="Buku Pengantar Ilmu Komunikasi">
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <p class="eyebrow">Shipment Tracking</p>
+        <h2>Cari Pesanan</h2>
+
+        <form id="trackingForm" class="tracking-search"
+              style="margin-top:20px">
+
+            <div class="form-group">
+                <label for="doNumber">
+                    Nomor Delivery Order / NIM
+                </label>
+
+                <input type="text"
+                       id="doNumber"
+                       placeholder="Masukkan nomor DO atau NIM"
+                       required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Lacak Pesanan →
+            </button>
+
+        </form>
+
+        <p class="muted" style="margin-top:12px">
+            Contoh NIM: 312510256
+        </p>
+
+        <div id="trackingResult" class="tracking-result"></div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+            <a href="dashboard.html" class="brand"
+               style="color:white">
+                <span class="brand-icon">B</span>
+                BookHaven
+            </a>
+
+            <p style="margin-top:10px">
+                Your trusted online bookstore.
+            </p>
+        </div>
+
+        <div>
+            <p>© 2026 BookHaven Bookstore</p>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
